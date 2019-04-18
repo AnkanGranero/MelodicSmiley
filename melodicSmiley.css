@@ -2,17 +2,10 @@ body {background: rgb(202, 107, 178);
 
 }
 
-.smiley {  display: flex;
-   
-position: relative; 
-justify-content: end;
-
-height: 100vh;
-width:100vw;
- 
 
 
-}
+
+
 
 
 #shape {position: absolute;
@@ -23,7 +16,7 @@ width:100vw;
     margin: auto;
     border-radius: 50%;
     top: 20%;
-    left: 35%;
+    left: 38%;
     box-shadow: 1px 5px 8px 3px #45394d;
     
                   }
@@ -36,7 +29,7 @@ width:100vw;
     height:14%;
     width: 5%;
     top: 31%;
-    left: 39.8%;
+    left: 41.5%;
     z-index: 1;
 }
 
@@ -46,13 +39,13 @@ width:100vw;
     height:14%;
     width: 5%;
     top: 31%;
-    left: 49%;
+    left: 53%;
     z-index: 0;
 }
 
 #mouth { position: absolute; 
     top: 20%;
-    left: 46.8%;
+    left: 49.6%;
     transform: translateX(-50%);
     border: 10px solid transparent;
     border-bottom: 10px solid black;
@@ -63,9 +56,53 @@ width:100vw;
     
 }
 
+.smileyWrapper {  display: flex;
+    flex-direction: row;
+ position: relative; 
+ justify-content: center;
+ flex-wrap: wrap;
+ 
+ height: 100vh;
+ width:100vw;
+
+  
+ 
+ 
+ }
+/* .smiley { 
+    
+} */
+
+.waveForm { display:flex;
+  
+   flex-direction: row;
+   
+   align-self: flex-end;
 
 
 
+
+ 
+   
+   
+
+}
+
+
+#waveFormBtn {background-color: black;
+              /* border-top: 40px solid black;
+              border-left: 40px solid transparent;
+              border-right:40px solid transparent;
+              border-bottom: 40px solid black; */
+              border: 5px solid black;
+              margin: 10px;
+              border-radius: 30px; 
+              font-size: 40px;
+              color:  rgb(202, 107, 178);       
+
+}
+#waveFormBtn:hover {color: white ;
+    transform: scale(1.1); }
 
 
 

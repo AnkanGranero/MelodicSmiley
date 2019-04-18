@@ -14,17 +14,27 @@
 
    
     
-        <div class="smiley">
+        <div class="smileyWrapper">
+            <div class="smiley">
             <div id="shape"></div>
             <div id="left-eye"></div>
             <div id="right-eye"></div>
             <div id="mouth"></div>
        
+       
     
 
     </div>
+    <div class="waveForm">
+        <button id="waveFormBtn">SINE</button id="waveFormBtn">
+    </div>
+</div>
     <script>
         let i = 0;
+        let j = 0;
+        let waveform = "sine";
+
+   
 
     document.querySelector(".smiley").addEventListener("click", function (e) {
         e.preventDefault();
@@ -34,13 +44,13 @@
 
         let oscilator = audioCtx.createOscillator();
         oscilator.frequency.value = 440;
-        oscilator.type = "sine";
+        oscilator.type = waveform;
         oscilator.connect(audioCtx.destination);
 
         let arr = [293.66,329.63, 261.63, 130.81, 196.00	];
 
      
-   /*     let typeArr = ["sine","sawtooth", "triangle", "square" ]; */
+   
     
 
         function melody() {
@@ -57,11 +67,25 @@
 
         setTimeout(melody, 300);
 
-
+        
 
 
 
     });
+    document.querySelector("#waveFormBtn").addEventListener("click", function (e) {
+        e.preventDefault();
+        let typeArr = ["sine","sawtooth", "triangle", "square" ];
+        if (j == 3) {
+            j= -1
+            console.log("changed j to -1")
+        }
+
+        waveform = typeArr[++j]
+        document.getElementById("waveFormBtn").innerHTML = waveform;
+        
+
+        
+        })
 
 </script>
 
