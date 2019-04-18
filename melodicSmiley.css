@@ -1,0 +1,26 @@
+body {background: rgb(202, 107, 178);
+
+}
+
+.smiley {  display: flex;
+           position: relative; 
+           justify-content: end;
+
+
+
+}
+
+
+#shape {position: absolute;
+    background:yellow;
+    height: 400px;
+    width: 400px;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    top: 20%;
+    left: 35%;
+    
+    
+
+ }
