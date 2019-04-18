@@ -12,7 +12,7 @@
 <body>
     
 
-    <body>
+   
     
         <div class="smiley">
             <div id="shape"></div>
@@ -23,7 +23,47 @@
     
 
     </div>
-    </body>
+    <script>
+        let i = 0;
+
+    document.querySelector(".smiley").addEventListener("click", function (e) {
+        e.preventDefault();
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        console.log("tryckt")
+        let audioCtx = new window.AudioContext();
+
+        let oscilator = audioCtx.createOscillator();
+        oscilator.frequency.value = 440;
+        oscilator.type = "sine";
+        oscilator.connect(audioCtx.destination);
+
+        let arr = [293.66,329.63, 261.63, 130.81, 196.00	];
+
+     
+   /*     let typeArr = ["sine","sawtooth", "triangle", "square" ]; */
+    
+
+        function melody() {
+            oscilator.frequency.value = arr[i++];
+            
+            oscilator.start(audioCtx.currentTime);
+            oscilator.stop(audioCtx.currentTime + 1.5);
+           
+            if (i > 4) {
+                i = 0;
+                
+            }
+        }
+
+        setTimeout(melody, 300);
+
+
+
+
+
+    });
+
+</script>
 
 </body>
 </html>
