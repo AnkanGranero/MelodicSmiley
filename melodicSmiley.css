@@ -3,9 +3,13 @@ body {background: rgb(202, 107, 178);
 }
 
 .smiley {  display: flex;
-           position: relative; 
-           justify-content: end;
+   
+position: relative; 
+justify-content: end;
 
+height: 100vh;
+width:100vw;
+ 
 
 
 }
@@ -20,7 +24,51 @@ body {background: rgb(202, 107, 178);
     border-radius: 50%;
     top: 20%;
     left: 35%;
+    box-shadow: 1px 5px 8px 3px #45394d;
     
-    
+                  }
 
- }
+
+
+#left-eye { position: absolute; 
+    background: black;
+    border-radius: 50%;
+    height:14%;
+    width: 5%;
+    top: 31%;
+    left: 39.8%;
+    z-index: 1;
+}
+
+#right-eye { position: absolute; 
+    background: black;
+    border-radius: 50%;
+    height:14%;
+    width: 5%;
+    top: 31%;
+    left: 49%;
+    z-index: 0;
+}
+
+#mouth { position: absolute; 
+    top: 20%;
+    left: 46.8%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-bottom: 10px solid black;
+    height:300px;
+    width: 300px;
+    
+    border-radius: 100%;
+    
+}
+
+
+
+
+
+
+
+
+
+
